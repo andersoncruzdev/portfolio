@@ -7,7 +7,7 @@ class ContactLinks extends HTMLElement {
 
   private render() {
     const icons = [
-      { src: "./icons/github.png", href: "https://github.com/anderson-gpc" },
+      { src: "./icons/github.png", href: "https://github.com/andersoncruzdev" },
       { src: "./icons/gmail.png", href: "mailto:andersong.pereiracruz@gmail.com" },
       { src: "./icons/linkedin.png", href: "https://www.linkedin.com/in/anderson-gpc" }
     ];
