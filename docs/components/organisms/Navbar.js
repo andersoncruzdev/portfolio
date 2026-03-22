@@ -14,7 +14,7 @@ class Navbar extends HTMLElement {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
-      <link rel="stylesheet" href="../../../docs/styles/organisms/Navbar.css" />
+      <link rel="stylesheet" href="../styles/organisms/Navbar.css" />
       <nav class="navbar">
         <img class="navbar__logo" src="./icons/logo.png" />
         <img class="navbar__open-btn navbar__options animate__animated" src="./icons/menu.png" />
