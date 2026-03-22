@@ -35,7 +35,7 @@ class IconLink extends HTMLElement {
       const link = document.createElement('link');
       link.id = 'icon-link-styles';
       link.rel = 'stylesheet';
-      link.href = './styles/atoms/IconLink.css';
+      link.href = '../../../docs/styles/atoms/IconLink.css';
       document.head.appendChild(link);
     }
   }

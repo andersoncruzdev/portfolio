@@ -13,7 +13,7 @@ class ExperienceSection extends HTMLElement {
             const link = document.createElement('link');
             link.id = 'experience-section-styles';
             link.rel = 'stylesheet';
-            link.href = './styles/organisms/ExperienceSection.css';
+            link.href = '../../../docs/styles/organisms/ExperienceSection.css';
             document.head.appendChild(link);
         }
     }

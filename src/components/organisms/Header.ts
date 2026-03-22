@@ -13,7 +13,7 @@ class Header extends HTMLElement {
       const link = document.createElement('link');
       link.id = 'header-styles';
       link.rel = 'stylesheet';
-      link.href = './styles/organisms/Header.css';
+      link.href = '../../../docs/styles/organisms/Header.css';
       document.head.appendChild(link);
     }
   }

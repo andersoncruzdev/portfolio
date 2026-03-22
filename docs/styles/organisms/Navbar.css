@@ -18,6 +18,15 @@
 .navbar__options {
   width: 3rem;
   cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar__options:hover {
+  opacity: 0.85;
+}
+
+.navbar__options:active {
+  transform: scale(0.96);
 }
 
 .navbar .animate__animated {
@@ -43,33 +52,54 @@
   flex-direction: column;
   align-items: end;
   list-style: none;
-  padding: 0;
   margin: 0 1rem 0 0;
   padding: 0 1rem 0 0;
   width: 100%;
 }
 
 .navbar__list li {
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
+  opacity: 0.55;
   position: relative;
+  transition: opacity 0.3s ease, transform 0.25s ease;
 }
 
 .navbar__list li.active {
   opacity: 1;
 }
 
+.navbar__list li:hover,
+.navbar__list li:focus-within {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.navbar__list li:active {
+  transform: translateY(0) scale(0.98);
+}
+
 .navbar__list .underline {
-  height: 0.4rem;
+  height: 0.28rem;
   width: 100%;
   background-color: transparent;
-  border-radius: 100%;
-  transition: background-color 0.3s ease;
-  margin-top: 0.4rem;
+  border-radius: 999px;
+  margin-top: 0.45rem;
+  transform: scaleX(0.35);
+  transform-origin: right;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar__list li:hover .underline,
+.navbar__list li:focus-within .underline {
+  background-color: #323647;
+  transform: scaleX(1);
+  opacity: 0.65;
 }
 
 .navbar__list li.active .underline {
   background-color: #323647;
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 .navbar__navigation ul li {
@@ -83,12 +113,35 @@
   color: white;
   font-size: 2rem;
   margin: 0;
+  position: relative;
+  display: inline-block;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.navbar__navigation ul li a:hover,
+.navbar__navigation ul li a:focus-visible {
+  opacity: 1;
+}
+
+.navbar__navigation ul li a:focus-visible {
+  outline: 2px solid #A1C4F1;
+  outline-offset: 0.35rem;
+  border-radius: 0.25rem;
 }
 
 .navbar__close-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar__close-btn:hover {
+  opacity: 0.85;
+}
+
+.navbar__close-btn:active {
+  transform: scale(0.96);
 }
 
 @media screen and (min-width: 768px) {
@@ -120,13 +173,18 @@
     width: auto;
   }
 
+  .navbar__list li:hover .underline,
+  .navbar__list li:focus-within .underline {
+    background-color: #A1C4F1;
+    opacity: 0.6;
+  }
+
   .navbar__list li.active .underline {
     background-color: #A1C4F1;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .navbar__options {
     display: none;
   }
 }
-
