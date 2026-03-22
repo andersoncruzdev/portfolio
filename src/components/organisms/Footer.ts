@@ -26,7 +26,6 @@ class Footer extends HTMLElement {
         <p class="text-secondary footer__text text-white">Contato</p>
         <h2 class="footer__text text-white">Entre em contato</h2>
         <contatos-component></contatos-component>
-        <p class="text-info footer__text">Feito com <strong>web-components</strong> utilizando <strong>TypeScript</strong></p>
       </footer>
     `;
   }
