@@ -25,15 +25,6 @@ class ProjectsComponent extends HTMLElement {
                 linkVideo: "https://www.youtube.com/watch?v=uCP7hKKq_N8&list=PLGEU2ZlFybrZTMmiWrodrSSVjEzLtUwPO",
                 deploy: "",
             },
-            {
-                title: "Biblioteca",
-                src: "./images/biblioteca.png",
-                description: "Desenvolvi uma aplicação web fullstack que funciona como uma biblioteca digital, com backend e banco de dados integrados. Usuários comuns podem visualizar livros disponíveis, acompanhar empréstimos ativos e vencidos, e gerenciá-los, enquanto administradores podem gerenciar o acervo, adicionar e atualizar livros, e realizar empréstimos e devoluções, mantendo a base de dados atualizada. O projeto foi construído totalmente com web components, eliminando dependências externas e garantindo um código modular e leve. No front-end, todas as informações necessárias são carregadas em uma única requisição no login e armazenadas em cache, otimizando performance e experiência do usuário.",
-                technologies: "Node,TypeScript,MySQL",
-                platform: "Web",
-                linkVideo: "https://www.youtube.com/watch?v=_z2LQ9llPt4",
-                deploy: "https://biblioteca-neon.vercel.app/",
-            },
         ];
         projetcts.forEach((project, index) => {
             const projectEl = document.createElement("card-component");
