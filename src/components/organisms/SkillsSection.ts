@@ -1,5 +1,12 @@
 import '../atoms/GridIcon.js';
 
+type SkillItem = {
+  label: string;
+  src: string;
+};
+
+type SkillsMap = Record<string, SkillItem[]>;
+
 class SkillsSection extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -17,33 +24,43 @@ class SkillsSection extends HTMLElement {
     }
   }
 
-  private skills() {
-    const containerSkills = this.querySelector("#container__skills");
-    containerSkills!.innerHTML = '';
+  private skills(): void {
+    const containerSkills = this.querySelector('#container__skills');
 
-    const iconsSkills = {
-      "Linguagens": [
-        "JavaScript,./icons/javascript.png",
-        "TypeScript,./icons/typescript.png",
-        "HTML,./icons/html.png",
-        "CSS,./icons/css.png",
-        "Sass,./icons/sass.png",
+    if (!containerSkills) return;
+
+    containerSkills.innerHTML = '';
+
+    const iconsSkills: SkillsMap = {
+      Linguagens: [
+        { label: 'JavaScript', src: './icons/javascript.png' },
+        { label: 'TypeScript', src: './icons/typescript.png' },
+        { label: 'Java', src: './icons/java.png' }
       ],
-      "Frameworks e Bibliotecas": [
-        "React,./icons/react.png",
-        "Next.js,./icons/nextjs.png",
-        "Vue,./icons/vue.png",
-        "Express,./icons/express.png",
-        "Node.js,./icons/node.png",
-        "Tailwind,./icons/tail.png",
-        "Bootstrap,./icons/boot.png"
+      'Front-end': [
+        { label: 'HTML', src: './icons/html.png' },
+        { label: 'CSS', src: './icons/css.png' },
+        { label: 'Sass', src: './icons/sass.png' },
+        { label: 'React', src: './icons/react.png' },
+        { label: 'Next.js', src: './icons/nextjs.png' },
+        { label: 'Vue', src: './icons/vue.png' },
+        { label: 'Tailwind CSS', src: './icons/tail.png' },
+        { label: 'Bootstrap', src: './icons/boot.png' }
       ],
-      "Bancos de Dados": [
-        "MySQL,./icons/mysql.png"
+      'Back-end': [
+        { label: 'Node.js', src: './icons/node.png' },
+        { label: 'Express', src: './icons/express.png' },
+        { label: 'Spring Boot', src: './icons/springboot.png' }
       ],
-      "Ferramentas e Outros": [
-        "Git,./icons/git.png",
-        "Docker,./icons/docker.png",
+      Dados: [
+        { label: 'MySQL', src: './icons/mysql.png' },
+        { label: 'PostgreSQL', src: './icons/postgresql.png' },
+        { label: 'MongoDB', src: './icons/mongodb.png' }
+      ],
+      Ferramentas: [
+        { label: 'Git', src: './icons/git.png' },
+        { label: 'Docker', src: './icons/docker.png' },
+        { label: 'AWS', src: './icons/aws.png' }
       ]
     };
 
@@ -55,25 +72,23 @@ class SkillsSection extends HTMLElement {
       categoryTitle.textContent = category;
       categoryDiv.appendChild(categoryTitle);
 
-      icons.forEach(iconString => {
-        const [label, src] = iconString.split(",");
+      icons.forEach(({ label, src }) => {
         const gridIcon = document.createElement('grid-icons');
-        gridIcon.setAttribute("titleGrid", category);
-        gridIcon.setAttribute("src", src);
-        gridIcon.setAttribute("label", label);
+        gridIcon.setAttribute('titleGrid', category);
+        gridIcon.setAttribute('src', src);  
+        gridIcon.setAttribute('label', label);
         categoryDiv.appendChild(gridIcon);
       });
 
-      containerSkills!.appendChild(categoryDiv);
+      containerSkills.appendChild(categoryDiv);
     });
   }
 
-  private render() {
+  private render(): void {
     this.innerHTML = `
       <section id="container__skills" class="skills-section__container"></section>
     `;
   }
 }
 
-customElements.define("skills-component", SkillsSection);
-
+customElements.define('skills-component', SkillsSection);
