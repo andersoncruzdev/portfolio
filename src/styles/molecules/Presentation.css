@@ -1,0 +1,12 @@
+.presentation__underline {
+  width: 20%;
+  height: 1rem;
+  background-color: var(--highlighted-yellow);
+}
+
+@media screen and (min-width: 768px) {
+  .presentation__underline {
+    width: 5%;
+  }
+}
+

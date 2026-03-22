@@ -24,7 +24,7 @@ class GridIcon extends HTMLElement {
             const link = document.createElement('link');
             link.id = 'grid-icon-styles';
             link.rel = 'stylesheet';
-            link.href = '../../../docs/styles/atoms/GridIcon.css';
+            link.href = '../styles/atoms/GridIcon.css';
             document.head.appendChild(link);
         }
     }

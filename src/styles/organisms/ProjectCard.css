@@ -1,0 +1,140 @@
+.project-card__wrapper {
+  background-color: var(--body-color);
+  color: #ffffff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.project-card__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  width: 100%;
+  position: relative;
+}
+
+.project-card__image-box {
+  flex: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card__image-box img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card__description-box {
+  flex: 4;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card__platform {
+  color: var(--highlighted-green);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.project-card__tech-list {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  color: #aaa;
+}
+
+.project-card__tech-list span {
+  margin-right: 1rem;
+}
+
+.project-card__buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-card__buttons button {
+  background-color: var(--highlighted-green);
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-card__video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.project-card__video-modal.active {
+  display: flex;
+}
+
+.project-card__video-modal iframe {
+  width: 80vw;
+  height: 45vw;
+  max-width: 960px;
+  max-height: 540px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+}
+
+.project-card__video-modal .close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .project-card__content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .project-card__content.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .project-card__description-box {
+    margin-top: 0;
+    position: relative;
+    left: -10%;
+    max-width: 500px;
+    z-index: 2;
+  }
+
+  .project-card__content.reverse .project-card__description-box {
+    left: 10%;
+  }
+}
+

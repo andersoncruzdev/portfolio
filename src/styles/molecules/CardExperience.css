@@ -1,0 +1,44 @@
+.card-experience {
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-experience:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-experience__header a {
+  color: var(--highlighted-yellow);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-experience__header a:hover {
+  text-decoration: underline;
+}
+
+.card-experience__header p {
+  color: var(--highlighted-blue);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.card-experience__title {
+  color: var(--highlighted-green);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.card-experience__actions span {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+

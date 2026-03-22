@@ -9,7 +9,7 @@ class Presentation extends HTMLElement {
       const link = document.createElement('link');
       link.id = 'presentation-styles';
       link.rel = 'stylesheet';
-      link.href = '../../../docs/styles/molecules/Presentation.css';
+      link.href = '../styles/molecules/Presentation.css';
       document.head.appendChild(link);
     }
   }

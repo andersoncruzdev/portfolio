@@ -1,0 +1,27 @@
+.skills-section__container {
+  display: grid;
+  gap: 1.5rem;
+  background-color: var(--body-color);
+}
+
+@media (min-width: 768px) {
+  .skills-section__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-section__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills-section__category {
+  padding: 1rem;
+}
+
+.skills-section__category > h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary-color, #ccc);
+}
+
