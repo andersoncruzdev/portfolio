@@ -9,7 +9,7 @@ class About extends HTMLElement {
             const link = document.createElement('link');
             link.id = 'about-styles';
             link.rel = 'stylesheet';
-            link.href = '../styles/organisms/About.css';
+            link.href = './styles/organisms/About.css';
             document.head.appendChild(link);
         }
     }

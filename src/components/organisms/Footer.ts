@@ -15,7 +15,7 @@ class Footer extends HTMLElement {
       const link = document.createElement('link');
       link.id = 'footer-styles';
       link.rel = 'stylesheet';
-      link.href = '../styles/organisms/Footer.css';
+      link.href = './styles/organisms/Footer.css';
       document.head.appendChild(link);
     }
   }

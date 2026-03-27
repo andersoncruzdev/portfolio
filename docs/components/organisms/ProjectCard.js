@@ -10,7 +10,7 @@ class ProjectCard extends HTMLElement {
             const link = document.createElement('link');
             link.id = 'project-card-styles';
             link.rel = 'stylesheet';
-            link.href = '../styles/organisms/ProjectCard.css';
+            link.href = './styles/organisms/ProjectCard.css';
             document.head.appendChild(link);
         }
     }
