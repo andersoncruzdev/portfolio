@@ -10,7 +10,7 @@ class SkillsSection extends HTMLElement {
             const link = document.createElement('link');
             link.id = 'skills-section-styles';
             link.rel = 'stylesheet';
-            link.href = '../styles/organisms/SkillsSection.css';
+            link.href = './styles/organisms/SkillsSection.css';
             document.head.appendChild(link);
         }
     }

@@ -9,7 +9,7 @@ class CardExperience extends HTMLElement {
             const link = document.createElement('link');
             link.id = 'card-experience-styles';
             link.rel = 'stylesheet';
-            link.href = '../styles/molecules/CardExperience.css';
+            link.href = './styles/molecules/CardExperience.css';
             document.head.appendChild(link);
         }
     }

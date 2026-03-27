@@ -10,7 +10,7 @@ class ProjectsSection extends HTMLElement {
             const link = document.createElement('link');
             link.id = 'projects-section-styles';
             link.rel = 'stylesheet';
-            link.href = '../styles/organisms/ProjectsSection.css';
+            link.href = './styles/organisms/ProjectsSection.css';
             document.head.appendChild(link);
         }
     }
